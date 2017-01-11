@@ -28,7 +28,7 @@
                                     <constraint firstAttribute="height" constant="60" id="grg-HI-cVV"/>
                                 </constraints>
                             </view>
-                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="fZ2-fb-xK7">
+                            <searchBar contentMode="redraw" searchBarStyle="minimal" translatesAutoresizingMaskIntoConstraints="NO" id="fZ2-fb-xK7">
                                 <rect key="frame" x="0.0" y="60" width="375" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="sSD-XE-qcu"/>
@@ -54,8 +54,9 @@
                                             <rect key="frame" x="0.0" y="0.0" width="105" height="105"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" alpha="0.94999999999999996" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="79" translatesAutoresizingMaskIntoConstraints="NO" id="HWX-JR-6hX">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="79" translatesAutoresizingMaskIntoConstraints="NO" id="HWX-JR-6hX">
                                                     <rect key="frame" x="0.0" y="0.0" width="105" height="80"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="80" id="f3Q-0D-laH"/>
                                                     </constraints>
