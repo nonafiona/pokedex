@@ -37,7 +37,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             
             // MARK: Dynamically Display Sprites
             let pokemon = Pokemon(name: "", pokedexId: indexPath.row)
-            cell.configureCell(pokemon: pokemon)
+            cell.configureCell(pokemon)
             
             return cell
         } else {

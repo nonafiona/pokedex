@@ -29,7 +29,7 @@ class PokeCell: UICollectionViewCell {
     }
     
     // MARK: Configure Cell Method
-    func configureCell(pokemon: Pokemon) {
+    func configureCell(_ pokemon: Pokemon) {
         
         self.pokemon = pokemon
         
