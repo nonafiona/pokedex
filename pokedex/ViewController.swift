@@ -35,6 +35,10 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         // MARK: Create Cells
         if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PokeCell", for: indexPath) as? PokeCell {
             
+            // MARK: Dynamically Display Sprites
+            let pokemon = Pokemon(name: "", pokedexId: indexPath.row)
+            cell.configureCell(pokemon: pokemon)
+            
             return cell
         } else {
             
