@@ -11,13 +11,25 @@ import UIKit
 class PokeCell: UICollectionViewCell {
     
     // MARK: IBOutlets
+    
     @IBOutlet weak var thumbImage: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
     
-    // MARK: Instances 
+    // MARK: Instances
+    
     var pokemon: Pokemon!
     
-    // MARK: Configure Cell 
+    // MARK: UI Helper Methods
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        
+        // MARK: Rounded Corners
+        layer.cornerRadius = 5.0
+    }
+    
+    
+    // MARK: Configure Cell Method
     func configureCell(pokemon: Pokemon) {
         
         self.pokemon = pokemon
