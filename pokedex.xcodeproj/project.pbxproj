@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BA1E57781E2B40A4003C16C2 /* music.png in Resources */ = {isa = PBXBuildFile; fileRef = BA1E57771E2B40A4003C16C2 /* music.png */; };
+		BA1E577A1E2B40B4003C16C2 /* music.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = BA1E57791E2B40B4003C16C2 /* music.mp3 */; };
 		BA3A18121E25EA4A004CDA20 /* PokeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA3A18111E25EA4A004CDA20 /* PokeCell.swift */; };
 		BA3A18161E27131A004CDA20 /* csv.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA3A18151E27131A004CDA20 /* csv.swift */; };
 		BA7859E01E21B26C00CA7AE1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA7859DF1E21B26C00CA7AE1 /* AppDelegate.swift */; };
@@ -20,6 +22,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BA1E57771E2B40A4003C16C2 /* music.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = music.png; sourceTree = "<group>"; };
+		BA1E57791E2B40B4003C16C2 /* music.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = music.mp3; sourceTree = "<group>"; };
 		BA3A18111E25EA4A004CDA20 /* PokeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PokeCell.swift; sourceTree = "<group>"; };
 		BA3A18151E27131A004CDA20 /* csv.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = csv.swift; sourceTree = "<group>"; };
 		BA7859DC1E21B26C00CA7AE1 /* pokedex.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = pokedex.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -107,6 +111,8 @@
 			children = (
 				BAB4AE441E2AEF1B0032A887 /* pokemon.ttf */,
 				BA8F65FB1E24033000FAD343 /* pokemon.csv */,
+				BA1E57771E2B40A4003C16C2 /* music.png */,
+				BA1E57791E2B40B4003C16C2 /* music.mp3 */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -185,6 +191,8 @@
 				BA7859E71E21B26C00CA7AE1 /* Assets.xcassets in Resources */,
 				BA8F65FC1E24033000FAD343 /* pokemon.csv in Resources */,
 				BA7859E51E21B26C00CA7AE1 /* Main.storyboard in Resources */,
+				BA1E577A1E2B40B4003C16C2 /* music.mp3 in Resources */,
+				BA1E57781E2B40A4003C16C2 /* music.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

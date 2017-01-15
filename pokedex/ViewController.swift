@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 class ViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
 
@@ -14,7 +15,9 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     
     @IBOutlet weak var collection: UICollectionView!
     
+    // MARK: Instances
     var pokemon = [Pokemon]()
+    var musicPlayer: AVAudioPlayer!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,6 +29,11 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         
         // MARK: Parser Setup
         parsePokemonCSV()
+        
+    }
+    
+    // MARK: Initialize Audio
+    func initAudio() {
         
     }
     
@@ -94,8 +102,14 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
                         sizeForItemAt indexPath: IndexPath) -> CGSize {
         
         // MARK: Define Size For Cell
-        
         return CGSize(width: 105, height: 105)
+        
+    }
+    
+    // MARK: IBActions
+    
+    @IBAction func musicButtonPressed(_ sender: UIButton) {
+        
         
     }
     
