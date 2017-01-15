@@ -27,18 +27,18 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         collection.dataSource = self
         collection.delegate = self
         
-        // MARK: Parser Setup
+        // MARK: Call Parser Setup
         parsePokemonCSV()
+        
         
     }
     
-    // MARK: Initialize Audio
-    func initAudio() {
-        
-    }
+    
     
     // MARK: Parser Method 
     func parsePokemonCSV() {
+        
+        // MARK: Path to CSV file
         let path = Bundle.main.path(forResource: "pokemon", ofType: "csv")!
         
         do {
@@ -106,12 +106,6 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         
     }
     
-    // MARK: IBActions
-    
-    @IBAction func musicButtonPressed(_ sender: UIButton) {
-        
-        
-    }
     
 }
 

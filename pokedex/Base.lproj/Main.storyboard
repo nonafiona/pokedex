@@ -30,7 +30,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="60"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pokedex!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8fB-iE-xTx">
-                                        <rect key="frame" x="155.66666666666669" y="18" width="102.00000000000006" height="38"/>
+                                        <rect key="frame" x="156" y="18" width="102" height="38"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="102" id="Hmh-3b-38d"/>
                                             <constraint firstAttribute="height" constant="38" id="YV5-SX-TGM"/>
@@ -39,17 +39,6 @@
                                         <color key="textColor" red="0.99989169840000003" green="1" blue="0.99988096950000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cUq-Pg-eiz">
-                                        <rect key="frame" x="375" y="23" width="31" height="28"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="28" id="Fxj-ln-txI"/>
-                                            <constraint firstAttribute="width" constant="31" id="nc6-9F-ERw"/>
-                                        </constraints>
-                                        <state key="normal" image="music.png"/>
-                                        <connections>
-                                            <action selector="musicButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="s5J-UP-06v"/>
-                                        </connections>
-                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.31726308683932097" green="0.70205703708860612" blue="0.69885042083652882" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -92,9 +81,8 @@
                                                         <constraint firstAttribute="height" constant="80" id="f3Q-0D-laH"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vqg-8h-plY">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vqg-8h-plY">
                                                     <rect key="frame" x="0.0" y="80" width="105" height="25"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <color key="backgroundColor" red="0.3157267272" green="0.70316147799999995" blue="0.69671285149999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="15"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -104,8 +92,12 @@
                                         </view>
                                         <constraints>
                                             <constraint firstAttribute="trailing" secondItem="HWX-JR-6hX" secondAttribute="trailing" id="2e3-z3-UJG"/>
+                                            <constraint firstAttribute="bottom" secondItem="vqg-8h-plY" secondAttribute="bottom" id="HKR-kz-BWE"/>
+                                            <constraint firstItem="vqg-8h-plY" firstAttribute="trailing" secondItem="HWX-JR-6hX" secondAttribute="trailing" id="KAJ-8f-2kF"/>
+                                            <constraint firstItem="vqg-8h-plY" firstAttribute="leading" secondItem="HWX-JR-6hX" secondAttribute="leading" id="Lv5-XR-nf5"/>
                                             <constraint firstItem="HWX-JR-6hX" firstAttribute="leading" secondItem="YlN-pZ-uLT" secondAttribute="leading" id="MwV-t9-e1S"/>
                                             <constraint firstItem="HWX-JR-6hX" firstAttribute="top" secondItem="YlN-pZ-uLT" secondAttribute="top" id="bpX-LT-aXX"/>
+                                            <constraint firstItem="vqg-8h-plY" firstAttribute="top" secondItem="HWX-JR-6hX" secondAttribute="bottom" id="h5P-uo-AV5"/>
                                         </constraints>
                                         <connections>
                                             <outlet property="nameLabel" destination="vqg-8h-plY" id="BUy-2x-d1n"/>
@@ -145,6 +137,5 @@
     <resources>
         <image name="79" width="120" height="120"/>
         <image name="bg" width="1920" height="1200"/>
-        <image name="music.png" width="100" height="100"/>
     </resources>
 </document>
