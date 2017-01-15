@@ -26,12 +26,12 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         super.viewDidLoad()
         
         // MARK: CollectionView Setup
-        
         collection.dataSource = self
         collection.delegate = self
         
         // MARK: Search Bar Setup
         searchBar.delegate = self
+        searchBar.returnKeyType = UIReturnKeyType.done
         
         // MARK: Call Parser Setup
         parsePokemonCSV()
@@ -85,31 +85,26 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
                 cell.configureCell(poke)
             }
             
-            
             return cell
         } else {
-            
             return UICollectionViewCell()
         }
-        
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
         // MARK: OnTap Cell
-        
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if inSearchMode {
-            
             return filteredPokemon.count
         }
         return pokemon.count
     }
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        
+
         return 1
     }
     
@@ -124,12 +119,20 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     
     // MARK: Search Bar Methods
     
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        
+        // MARK: On return pressed
+        view.endEditing(true) // hides keyboard...
+    }
+    
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         
         if searchBar.text == nil || searchBar.text == "" {
             
+            // MARK: NOT inSearchMode Settings
             inSearchMode = false
             collection.reloadData()
+            view.endEditing(true) // hides keyboard...
             
         } else {
             
