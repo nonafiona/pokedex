@@ -101,7 +101,10 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        
+        if inSearchMode {
+            
+            return filteredPokemon.count
+        }
         return pokemon.count
     }
     
