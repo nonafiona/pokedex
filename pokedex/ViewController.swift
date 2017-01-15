@@ -18,6 +18,8 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     
     // MARK: Instances
     var pokemon = [Pokemon]()
+    var filteredPokemon = [Pokemon]()
+    var inSearchMode = false
     
     
     override func viewDidLoad() {
@@ -71,8 +73,18 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PokeCell", for: indexPath) as? PokeCell {
             
             // MARK: Dynamically Display Sprites
-            let poke = pokemon[indexPath.row]
-            cell.configureCell(poke)
+            let poke: Pokemon!
+            
+            if inSearchMode {
+                
+                poke = filteredPokemon[indexPath.row]
+                cell.configureCell(poke)
+            } else {
+                
+                poke = pokemon[indexPath.row]
+                cell.configureCell(poke)
+            }
+            
             
             return cell
         } else {
@@ -110,6 +122,23 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     // MARK: Search Bar Methods
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        
+        if searchBar.text == nil || searchBar.text == "" {
+            
+            inSearchMode = false
+            collection.reloadData()
+            
+        } else {
+            
+            // MARK: Search Settings
+            inSearchMode = true
+            let lower = searchBar.text!.lowercased()
+            
+            // MARK: Search Filter
+            filteredPokemon = pokemon.filter({$0.name.range(of: lower) != nil })
+            collection.reloadData()
+            
+        }
         
     }
     
