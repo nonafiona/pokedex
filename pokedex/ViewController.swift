@@ -7,17 +7,18 @@
 //
 
 import UIKit
-import AVFoundation
 
-class ViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+class ViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, UISearchBarDelegate {
 
     // MARK: IBOutlets
     
     @IBOutlet weak var collection: UICollectionView!
+    @IBOutlet weak var searchBar: UISearchBar!
+    
     
     // MARK: Instances
     var pokemon = [Pokemon]()
-    var musicPlayer: AVAudioPlayer!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,13 +28,13 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         collection.dataSource = self
         collection.delegate = self
         
+        // MARK: Search Bar Setup
+        searchBar.delegate = self
+        
         // MARK: Call Parser Setup
         parsePokemonCSV()
-        
-        
+
     }
-    
-    
     
     // MARK: Parser Method 
     func parsePokemonCSV() {
@@ -106,6 +107,11 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         
     }
     
+    // MARK: Search Bar Methods
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        
+    }
     
 }
 
