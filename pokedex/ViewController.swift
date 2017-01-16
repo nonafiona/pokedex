@@ -93,7 +93,20 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
-        // MARK: OnTap Cell
+        // MARK: Select Cell to View Details
+    
+        var poke: Pokemon!
+        
+        // MARK: Handling Search Feature
+        if inSearchMode {
+            poke = filteredPokemon[indexPath.row]
+        } else {
+            poke = pokemon[indexPath.row]
+        }
+        
+        // MARK: Segue to Detail View
+        performSegue(withIdentifier: "PokemonDetailVC", sender: poke)
+        
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -143,10 +156,23 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             // MARK: Search Filter
             filteredPokemon = pokemon.filter({$0.name.range(of: lower) != nil })
             collection.reloadData()
-            
         }
         
     }
+    
+    // MARK: Segues 
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "PokemonDetailVC" {
+            if case let detailsVC = segue.destination as? PokemonDetailVC {
+                if let poke = sender as? Pokemon {
+                    
+                }
+            }
+        }
+    }
+    
+    
     
 }
 
