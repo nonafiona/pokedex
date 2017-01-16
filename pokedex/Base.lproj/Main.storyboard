@@ -14,10 +14,10 @@
         </array>
     </customFonts>
     <scenes>
-        <!--Pokemon DetailVC-->
+        <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="PokemonDetailVC" customModule="pokedex" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="pokedex" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -128,7 +128,7 @@
                     <connections>
                         <outlet property="collection" destination="JAa-uC-VuL" id="sdZ-iW-Mad"/>
                         <outlet property="searchBar" destination="fZ2-fb-xK7" id="4Od-4M-756"/>
-                        <segue destination="ClB-3h-2XI" kind="show" id="7s1-15-v7j"/>
+                        <segue destination="ClB-3h-2XI" kind="show" identifier="PokemonDetailVC" id="7s1-15-v7j"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -146,12 +146,31 @@
                     <view key="view" contentMode="scaleToFill" id="RHF-KK-XFz">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZNc-Pl-jj1">
+                                <rect key="frame" x="155" y="358" width="105" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="Vjf-5e-ttj"/>
+                                    <constraint firstAttribute="width" constant="105" id="bo3-IW-iZf"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.99989169840000003" green="1" blue="0.99988096950000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.3157267272" green="0.70316147799999995" blue="0.69671285149999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="ZNc-Pl-jj1" firstAttribute="centerY" secondItem="RHF-KK-XFz" secondAttribute="centerY" id="2SG-MS-VX7"/>
+                            <constraint firstItem="ZNc-Pl-jj1" firstAttribute="centerX" secondItem="RHF-KK-XFz" secondAttribute="centerX" id="7Q1-r9-WG1"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="nameLabel" destination="ZNc-Pl-jj1" id="eJj-DK-4ok"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="t0k-6v-adV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="922" y="137"/>
+            <point key="canvasLocation" x="921.73913043478262" y="136.95652173913044"/>
         </scene>
     </scenes>
     <resources>

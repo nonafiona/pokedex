@@ -9,13 +9,18 @@
 import UIKit
 
 class PokemonDetailVC: UIViewController {
-
+    
     // MARK: Instances
     var pokemon: Pokemon!
+    
+    // MARK: IBOutlets
+    @IBOutlet weak var nameLabel: UILabel!
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        // MARK: Update View with Model Data
+        nameLabel.text = pokemon.name
     }
 }

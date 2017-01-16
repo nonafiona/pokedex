@@ -166,7 +166,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         if segue.identifier == "PokemonDetailVC" {
             if case let detailsVC = segue.destination as? PokemonDetailVC {
                 if let poke = sender as? Pokemon {
-                    
+                    detailsVC?.pokemon = poke
                 }
             }
         }
