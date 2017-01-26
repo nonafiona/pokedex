@@ -152,10 +152,10 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="60"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZNc-Pl-jj1">
-                                        <rect key="frame" x="108" y="24" width="105" height="29"/>
+                                        <rect key="frame" x="35.5" y="24" width="250" height="29"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="29" id="Vjf-5e-ttj"/>
-                                            <constraint firstAttribute="width" constant="105" id="bo3-IW-iZf"/>
+                                            <constraint firstAttribute="width" constant="250" id="bo3-IW-iZf"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="23"/>
                                         <color key="textColor" red="0.99989169840000003" green="1" blue="0.99988096950000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -424,12 +424,23 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="attackLabel" destination="P4d-gB-u7c" id="Azx-Hq-6f3"/>
+                        <outlet property="currentEvoImage" destination="xC4-o2-lyp" id="eaa-V0-kth"/>
+                        <outlet property="defenseLabel" destination="T42-LC-L0S" id="woa-wh-G9h"/>
+                        <outlet property="descriptionLabel" destination="qw0-ij-yoU" id="Rtv-Ws-YHT"/>
+                        <outlet property="evoLabel" destination="oE1-77-nO9" id="Bwx-B0-gEY"/>
+                        <outlet property="heightLabel" destination="HuM-4p-PYa" id="7bs-1l-mxM"/>
+                        <outlet property="mainImage" destination="yLK-pL-zKW" id="gq8-fM-Qqo"/>
                         <outlet property="nameLabel" destination="ZNc-Pl-jj1" id="eJj-DK-4ok"/>
+                        <outlet property="nextEvoImage" destination="sfZ-5F-oLN" id="cQW-gt-Eft"/>
+                        <outlet property="pokedexLabel" destination="bsv-eJ-DO7" id="aZr-rH-XzB"/>
+                        <outlet property="typeLabel" destination="a0T-HO-HyQ" id="QG1-8y-VIs"/>
+                        <outlet property="weightLabel" destination="nRN-BS-gCt" id="K5V-yu-YR1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="t0k-6v-adV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="920.625" y="136.26760563380282"/>
+            <point key="canvasLocation" x="920.625" y="136.25"/>
         </scene>
     </scenes>
     <resources>
