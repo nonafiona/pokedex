@@ -34,4 +34,12 @@ class PokemonDetailVC: UIViewController {
         // MARK: Update View with Model Data
         nameLabel.text = pokemon.name
     }
+    
+    // MARK: IBActions 
+    
+    @IBAction func backButtonPressed(_ sender: UIButton) {
+        
+        dismiss(animated: true, completion: nil)
+    }
+    
 }

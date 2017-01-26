@@ -168,6 +168,9 @@
                                             <constraint firstAttribute="height" constant="15" id="ioR-k0-gPa"/>
                                         </constraints>
                                         <state key="normal" image="Back"/>
+                                        <connections>
+                                            <action selector="backButtonPressed:" destination="ClB-3h-2XI" eventType="touchUpInside" id="7V3-NK-VDV"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.3157267272" green="0.70316147799999995" blue="0.69671285149999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
