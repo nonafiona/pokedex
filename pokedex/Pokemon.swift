@@ -22,11 +22,6 @@ class Pokemon {
     private var _attack: String!
     private var _nextEvolutionTxt: String!
     
-    
-    // 
-    
-    
-    
     // MARK: Data Encapsulation 
     
     var name: String {
