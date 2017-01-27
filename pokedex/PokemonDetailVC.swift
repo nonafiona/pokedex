@@ -31,8 +31,22 @@ class PokemonDetailVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // MARK: Update View with Model Data
         nameLabel.text = pokemon.name
+        
+        pokemon.downloadPokemonDetail {
+            
+            // MARK: Will run after network call is complete
+            self.updateUI()
+            
+        }
+        
+        
+    }
+    
+    // MARK: Update UI methods
+    
+    func updateUI() {
+        
     }
     
     // MARK: IBActions 
