@@ -36,7 +36,7 @@ class PokemonDetailVC: UIViewController {
         
         pokemon.downloadPokemonDetail {
             
-            // MARK: Will run after network call is complete
+            print("Did make it here?")
             self.updateUI()
             
         }
