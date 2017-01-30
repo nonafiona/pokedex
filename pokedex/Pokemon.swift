@@ -42,7 +42,7 @@ class Pokemon {
         self._name = name
         self._pokedexId = pokedexId
         
-        self._pokemonURL = "\(URL_BASE)\(URL_POKEMON)\(self._pokedexId)/"
+        self._pokemonURL = "\(URL_BASE)\(URL_POKEMON)\(self._pokedexId!)/"
         
     }
     
@@ -51,6 +51,8 @@ class Pokemon {
     func downloadPokemonDetail(completed: DownloadComplete) {
         
         Alamofire.request(_pokemonURL).responseJSON { (response) in
+            
+            // MARK: Inside Dictionary
             
             if let dict = response.result.value as? Dictionary<String, AnyObject> {
                 
@@ -64,15 +66,20 @@ class Pokemon {
                     self._height = height
                 }
                 
-                if let attack = dict["attack"] as? String {
+                if let attack = dict["attack"] as? Int {
                     
-                    self._attack = attack
+                    self._attack = "\(attack)"
                 }
                 
-                if let defense = dict["defense"] as? String {
+                if let defense = dict["defense"] as? Int {
                     
-                    self._defense = defense
+                    self._defense = "\(defense)"
                 }
+                
+                print(self._weight)
+                print(self._height)
+                print(self._attack)
+                print(self._defense)
             }
         }
         
