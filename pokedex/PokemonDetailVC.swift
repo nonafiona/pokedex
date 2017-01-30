@@ -36,7 +36,6 @@ class PokemonDetailVC: UIViewController {
         
         pokemon.downloadPokemonDetail {
             
-            print("Did make it here?")
             self.updateUI()
             
         }
@@ -47,6 +46,14 @@ class PokemonDetailVC: UIViewController {
     // MARK: Update UI methods
     
     func updateUI() {
+        
+        attackLabel.text = pokemon.attack
+        defenseLabel.text = pokemon.defense
+        weightLabel.text = pokemon.weight
+        heightLabel.text = pokemon.height
+        typeLabel.text = pokemon.type
+        descriptionLabel.text = pokemon.description
+        evoLabel.text = pokemon.nextEvolutionTxt
         
     }
     
