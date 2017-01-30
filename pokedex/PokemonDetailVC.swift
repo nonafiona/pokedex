@@ -32,12 +32,21 @@ class PokemonDetailVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // MARK: Update Name
         nameLabel.text = pokemon.name
         
+        // MARK: Update Pokemon Image
+        let img = UIImage(named: "\(pokemon.pokedexId)")
+        mainImage.image = img
+        currentEvoImage.image = img
+        
+        // MARK: Update PokedexID
+        pokedexLabel.text = "\(pokemon.pokedexId)"
+        
+        // MARK: Update data from Dictionary
         pokemon.downloadPokemonDetail {
             
             self.updateUI()
-            
         }
         
         
