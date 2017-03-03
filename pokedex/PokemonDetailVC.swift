@@ -33,7 +33,7 @@ class PokemonDetailVC: UIViewController {
         super.viewDidLoad()
         
         // MARK: Update Name
-        nameLabel.text = pokemon.name
+        nameLabel.text = pokemon.name.capitalized
         
         // MARK: Update Pokemon Image
         let img = UIImage(named: "\(pokemon.pokedexId)")
@@ -48,7 +48,6 @@ class PokemonDetailVC: UIViewController {
             
             self.updateUI()
         }
-        
         
     }
     
