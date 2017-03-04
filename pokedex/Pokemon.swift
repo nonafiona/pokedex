@@ -30,21 +30,27 @@ class Pokemon {
     // MARK: Data Protection
     
     var nextEvolutionName: String {
+        
         if _nextEvolutionName == nil {
+            
             _nextEvolutionName = ""
         }
         return _nextEvolutionName
     }
     
     var nextEvolutionId: String {
+        
         if _nextEvolutionId == nil {
+            
             _nextEvolutionId = ""
         }
         return _nextEvolutionId
     }
     
     var nextEvolutionLevel: String {
+        
         if _nextEvolutionLevel == nil {
+            
             _nextEvolutionLevel = ""
         }
         return _nextEvolutionLevel
@@ -232,8 +238,19 @@ class Pokemon {
                     
                     if let nextEvo = evolutions[0]["to"] as? String {
                         
-                        if newEvo.range(of: "mega") == nil {
+                        if nextEvo.range(of: "mega") == nil {
+                        
                             
+                            self._nextEvolutionName = nextEvo
+                            
+                            if let uri = evolutions[0]["resource_uri"] as? String {
+                                
+                                let newStr = uri.replacingOccurrences(of: "/api/v1/pokemon/", with: "")
+                                let nextEvoId = newStr.replacingOccurrences(of: "/", with: "")
+                                
+                                self._nextEvolutionId = nextEvoId
+                                
+                            }
                         }
                     }
                     
