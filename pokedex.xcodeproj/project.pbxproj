@@ -190,7 +190,7 @@
 				TargetAttributes = {
 					BA7859DB1E21B26B00CA7AE1 = {
 						CreatedOnToolsVersion = 8.1;
-						DevelopmentTeam = D36AC3V592;
+						DevelopmentTeam = U7U96T5227;
 						LastSwiftMigration = 0810;
 						ProvisioningStyle = Automatic;
 					};
@@ -412,10 +412,10 @@
 			baseConfigurationReference = 41EB6DA5640F613A4E27AF61 /* Pods-pokedex.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = D36AC3V592;
+				DEVELOPMENT_TEAM = U7U96T5227;
 				INFOPLIST_FILE = pokedex/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.faecodes.pokedex;
+				PRODUCT_BUNDLE_IDENTIFIER = com.makeschool.pokescout;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -426,10 +426,10 @@
 			baseConfigurationReference = 4B0B2750C5427F7DB42705FA /* Pods-pokedex.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = D36AC3V592;
+				DEVELOPMENT_TEAM = U7U96T5227;
 				INFOPLIST_FILE = pokedex/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.faecodes.pokedex;
+				PRODUCT_BUNDLE_IDENTIFIER = com.makeschool.pokescout;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
