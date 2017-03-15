@@ -51,7 +51,7 @@ class PokemonDetailVC: UIViewController {
         
     }
     
-    // MARK: Update UI methods
+    // MARK: Update UIView
     
     func updateUI() {
         
@@ -62,6 +62,18 @@ class PokemonDetailVC: UIViewController {
         typeLabel.text = pokemon.type
         descriptionLabel.text = pokemon.description
         evoLabel.text = pokemon.nextEvolutionTxt
+        
+        // MARK: Handling Evolution text & images
+        if pokemon.nextEvolutionId == "" {
+            evoLabel.text = "No Evolutions"
+            nextEvoImage.isHidden = true
+            
+        } else {
+            nextEvoImage.isHidden = false
+            nextEvoImage.image = UIImage(named: pokemon.nextEvolutionId)
+            let str = "Next Evolution: \(pokemon.nextEvolutionName) - LVL \(pokemon.nextEvolutionLevel)"
+            evoLabel.text = str
+        }
         
     }
     
